@@ -1,0 +1,119 @@
+﻿@model IEnumerable<ProjektWD3.Models.Hry>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="back">
+    <div class="title-section">
+        <h1>Hry</h1>
+    </div>
+<div class="intermediate-image">
+    <img src="/Amg/6bd2f0e0-224f-464d-85e0-021b550687ba.jpg" alt="Doom">
+</div>
+<div class="content3">
+
+        <p> <h3>Od detstva ma fascinujú počítačové hry. Táto vášeň mi zotrvala aj v dospelosti. S radosťou som sa púšťal do zaujimavých, neprebádaných herných svetov, pričom niektoré hry ešte stále bádam. Nepreferujem iba jeden herný žáner. V súčasnosti mám bohaté skúsenosti s rôznymi typmi herných žánrov, napríklad FPS (first-person shooter), RPG (role-playing game) a stratégie. Medzi moje obľúbené herné série patria klenoty ako 'Doom', 'Witcher', 'Far Cry', 'Metro', 'Fallout' a 'Wolfenstein', ktoré nesú v sebe jedinečnú kombináciu príbehov a herných mechanizmov. </h3></p>
+    <div class="games-grid">
+        <a href="https://store.steampowered.com/app/412020/Metro_Exodus/">
+            <div class="game-item">
+                <img src="/Amg/wallpaperflare.com_wallpaper (2).jpg" alt="Metro Exodus">
+        </a>
+        <h3>Metro Exodus</h3>
+    </div>
+    <div class="game-item">
+        <a href="https://store.steampowered.com/app/220240/Far_Cry_3/">
+            <img src="/Amg/wp1843184-far-cry-3-wallpapers.jpg" alt="Far Cry 3">
+        </a>
+        <h3>Far Cry 3</h3>
+    </div>
+    <div class="game-item">
+        <a href="https://store.steampowered.com/app/292030/Zaklna_3_Divok_hon/">
+            <img src="/Amg/wp1854628-the-witcher-3-wallpapers.jpg" alt="Witcher 3">
+        </a>
+        <h3>Witcher 3</h3>
+    </div>
+    <div class="game-item">
+        <a href="https://store.steampowered.com/app/377160/Fallout_4/">
+            <img src="/Amg/wallpaperflare.com_wallpaper (1).jpg" alt="Fallout 4">
+        </a>
+        <h3>Fallout 4</h3>
+    </div>
+    <div class="game-item">
+        <a href="https://store.steampowered.com/app/782330/DOOM_Eternal/">
+            <img src="/Amg/wallpaperflare.com_wallpaper.jpg" alt="Doom Eternal">
+        </a>
+        <h3>Doom Eternal</h3>
+    </div>
+</div>
+  </div>
+
+<div class="container5">
+<h1>Hry ktoré som hral</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nazov)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RokVydania)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Odkaz)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zaner)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Platforma)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ObrazokCesta)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nazov)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RokVydania)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Odkaz)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Zaner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Platforma)
+            </td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.ObrazokCesta))
+                    {
+                        <img src="~/images/@Url.Content(item.ObrazokCesta)" alt="Obrázok" style="max-width: 100px; height: auto;" />
+                    }
+                    else
+                    {
+                        <text>No Image</text>
+                    }
+                </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+       
+    </tbody>
+</table>
+

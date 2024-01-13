@@ -1,0 +1,124 @@
+﻿@model IEnumerable<ProjektWD3.Models.Anime_Filmy_a_Seriály>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="back">
+<div class="title-section">
+    <h1>Anime, filmy a seriály</h1>
+</div>
+    <div class="container4">
+        <div class="image-section4">
+            <img src="/Amg/Anime.png" alt="Anime">
+        </div>
+        <div class="text-section4">
+            <div>
+                <div class="title4"><h2>Anime</h2></div>
+                <div class="content4">
+                    <h3> Som veľkým nadšencom anime. Ide o formu japonského animovaného umenia, známeho svojim charakteristickým vizuálnym štýlom a estetikou. Tento žáner umožňuje skúmať a vnímať z inej perspektívy rozmanité príbehy a kultúrne zvláštnosti. Medzi moje obľúbené tituly patria 'Naruto', 'One Piece', 'Spy x Family', 'Mf Ghost', 'JoJo's Bizarre Adventure', 'Death Note', 'Dragon Ball' a 'One Punch Man'. Každý daný seriál ponúka unikátne príbehy a postavy, čo odráža šírku a hĺbku žánru anime. </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container4">
+
+        <div class="text-section4">
+            <div>
+                <div class="title1"><h2>Filmy</h2></div>
+                <div class="content4">
+                    <h3>Medzi filmové tituly, ktoré upredňostňujem patrí komédia a animovaný filmy. Obzvlášť si cením tituly ako 'Diktátor' a 'Borat', ktoré sú známe svojím satirickým pohľadom na sociálne a politické témy, pričom v sebe nesú výrazný kultúrny odkaz. Rovnako nepohrdnem ani jednoduchším odľahčeným humorom v diele, napr. 'Blbí a blbší', ktoré predstavujú klasiku americkej komédie. V oblasti animovaných filmov ma zaujali tituly ako 'Kung Fu Panda' a 'Shrek', ktoré nielenže ponúkajú vynikajúcu vizuálnu stránku, ale sú bohaté na hlboké morálne posolstvá a charakterovú rozmanitosť. Tieto filmy sú pre mňa viac než len zábavou; sú to diela, ktoré skúmajú rôzne aspekty ľudskej povahy a spoločenských interakcií. </h3>
+                </div>
+            </div>
+        </div>
+        <div class="image-section4">
+            <img src="/Amg/Filmy.png" alt="Anime">
+        </div>
+    </div>
+
+    <div class="container4">
+        <div class="image-section4">
+            <img src="/Amg/Serialypng.png" alt="Anime">
+        </div>
+        <div class="text-section4">
+            <div>
+                <div class="title4"><h2>Seriály</h2></div>
+                <div class="content4">
+                    <h3>Medzi moje obľúbené televízne seriály patria diela, ktoré sa vyznačujú originálnosťou, kreativitou a často aj hlbokým filozofickým podtextom. 'Love, Death & Robots' je vynikajúcim príkladom inovatívneho prístupu k animácii, kde každá epizóda predstavuje unikátny príbeh so svojou estetikou a naratívom. 'Rick a Morty' zase ponúka inteligentný humor zmiešaný s vedeckofantastickými prvkami, ktorý núti diváka zamyslieť sa nad existenciálnymi otázkami. Titul 'Rozčarování' odhaľuje šarm tradičnej animácie v spojení s moderným humorom a satirou. Dielo 'Gravity Falls' je vynikajúci príklad ako môže animovaný seriál osloviť široké publikum svojou záhadnosťou a komplexnými postavami. 'Captain Fall' a 'Inside Job' sú tiež príkladmi seriálov, ktoré spájajú zábavu s inteligentným scenáristickým spracovaním a originálnym pohľadom na svet a spoločenské dianie. Tieto seriály odzrkadľujú v celistvosti charakterizuju moju identitu Sú inšpiratívne, zábavné a zároveň ponúkajú hlbší pohľad do rôznych aspektov ľudskej existencie. </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container5">
+<h1>Zoznam Anime,Filmov a Seriálov</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nazov)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RokVydania)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zaner)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Odkaz)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Typ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ObrazokCesta)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nazov)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RokVydania)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Zaner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Odkaz)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Typ)
+            </td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.ObrazokCesta))
+                    {
+                        <img src="~/images/@Url.Content(item.ObrazokCesta)" alt="Obrázok" style="max-width: 100px; height: auto;" />
+                    }
+                    else
+                    {
+                        <text>No Image</text>
+                    }
+                </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

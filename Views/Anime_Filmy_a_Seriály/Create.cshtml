@@ -1,0 +1,61 @@
+﻿@model ProjektWD3.Models.Anime_Filmy_a_Seriály
+
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="container6">
+    <h1>Doplniť do zoznamu Anime,Film alebo seirál</h1>
+
+
+</div>
+<hr />
+<div class="container7">
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nazov" class="control-label"></label>
+                <input asp-for="Nazov" class="form-control" />
+                <span asp-validation-for="Nazov" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RokVydania" class="control-label"></label>
+                <input asp-for="RokVydania" class="form-control" />
+                <span asp-validation-for="RokVydania" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Zaner" class="control-label"></label>
+                <input asp-for="Zaner" class="form-control" />
+                <span asp-validation-for="Zaner" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Odkaz" class="control-label"></label>
+                <input asp-for="Odkaz" class="form-control" />
+                <span asp-validation-for="Odkaz" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Typ" class="control-label"></label>
+                <select asp-for="Typ" class="form-control" asp-items="@(new SelectList(new List<string>{ "Film", "Seriál", "Anime" }))">
+                    <option value="">Vyberte typ</option>
+                </select>
+                <span asp-validation-for="Typ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="uploadedFile">Nahráť obrázok</label>
+                <input type="file" name="uploadedFile" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

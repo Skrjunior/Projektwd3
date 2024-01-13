@@ -1,0 +1,63 @@
+﻿@model ProjektWD3.Models.Anime_Filmy_a_Seriály
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="container6">
+<h1>Detail zoznamu s Anime,Filmami alebo Seriálmi</h1>
+</div>
+<div class="container7">
+<div>    
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nazov)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nazov)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RokVydania)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RokVydania)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Zaner)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Zaner)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Odkaz)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Odkaz)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Typ)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Typ)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ObrazokCesta)
+        </dt>
+        <dd class = "col-sm-10">
+        @if (!string.IsNullOrEmpty(Model.ObrazokCesta))
+           {
+                <img src="~/images/@Url.Content(Model.ObrazokCesta)" alt="Obrázok" style="max-width: 100%; height: auto;" />
+           }
+        else
+           {
+           <text>No Image Available</text>
+           }
+        </dd>
+    </dl>
+</div>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

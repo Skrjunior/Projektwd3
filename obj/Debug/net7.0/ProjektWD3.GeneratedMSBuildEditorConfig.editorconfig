@@ -1,0 +1,89 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ProjektWD3
+build_property.RootNamespace = ProjektWD3
+build_property.ProjectDir = C:\Users\marek\Desktop\ProjektWD3 – kópia\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\marek\Desktop\ProjektWD3 – kópia
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/marek/Desktop/ProjektWD3 – kópia/Views/Anime_Filmy_a_Seriály/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5pbWVfRmlsbXlfYV9TZXJpw6FseVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marek/Desktop/ProjektWD3 – kópia/Views/Anime_Filmy_a_Seriály/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5pbWVfRmlsbXlfYV9TZXJpw6FseVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marek/Desktop/ProjektWD3 – kópia/Views/Anime_Filmy_a_Seriály/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5pbWVfRmlsbXlfYV9TZXJpw6FseVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marek/Desktop/ProjektWD3 – kópia/Views/Anime_Filmy_a_Seriály/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5pbWVfRmlsbXlfYV9TZXJpw6FseVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marek/Desktop/ProjektWD3 – kópia/Views/Anime_Filmy_a_Seriály/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5pbWVfRmlsbXlfYV9TZXJpw6FseVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marek/Desktop/ProjektWD3 – kópia/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marek/Desktop/ProjektWD3 – kópia/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marek/Desktop/ProjektWD3 – kópia/Views/Hries/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJpZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marek/Desktop/ProjektWD3 – kópia/Views/Hries/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJpZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marek/Desktop/ProjektWD3 – kópia/Views/Hries/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJpZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marek/Desktop/ProjektWD3 – kópia/Views/Hries/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJpZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marek/Desktop/ProjektWD3 – kópia/Views/Hries/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSHJpZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marek/Desktop/ProjektWD3 – kópia/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marek/Desktop/ProjektWD3 – kópia/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marek/Desktop/ProjektWD3 – kópia/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marek/Desktop/ProjektWD3 – kópia/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marek/Desktop/ProjektWD3 – kópia/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marek/Desktop/ProjektWD3 – kópia/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-elpleshynu

@@ -1,0 +1,62 @@
+﻿@model ProjektWD3.Models.Anime_Filmy_a_Seriály
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<div class="container6">
+
+    <h1>Smazať zo zoznamu</h1>
+
+    <h3>Si si istý že checš zmazať tento prvok zo soznamu?</h3>
+</div>
+
+<div>
+    <div class="container7">
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nazov)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nazov)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RokVydania)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RokVydania)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Zaner)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Zaner)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Odkaz)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Odkaz)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Typ)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Typ)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ObrazokCesta)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ObrazokCesta)
+        </dd>
+    </dl>
+
+    </div>
+
+    <form asp-action="Delete" asp-route-id="@Model.Id" method="post">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

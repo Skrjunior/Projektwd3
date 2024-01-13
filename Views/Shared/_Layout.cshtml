@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProjektWD3</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProjektWD3.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <div class="logo">
+                    <img src="/Amg/image2vector (7).svg" width="30" height="20" alt="Logo">
+                </div>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><h2>Marek Lukáč Junior</h2></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"> <h3>Domovská Stránka</h3></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"><h3>O mne</h3></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Hries" asp-action="Index"><h3>Hry</h3></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Anime_Filmy_a_Seriály" asp-action="Index"><h3>Anime Filmy a Seriály</h3></a>
+                        </li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/marek.lukac.129"><img src="/Amg/facebook-color-svgrepo-com.svg" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/better_off_dea0/"><img src="/Amg/instagram-1-svgrepo-com.svg" alt="Instagram"></a>
+                        <a href="https://discord.gg/F2r7e4uX"><img src="/Amg/discord-svgrepo-com.svg" alt="Discord"></a>
+                        <a href="https://steamcommunity.com/id/45454654894651542645564/"><img src="/Amg/steam-svgrepo-com.svg" alt="Steam"></a>
+                    </div>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+  
+    <div class="">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            <h3> &copy; 2024 - Marek Lukáč Junior </h3>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
